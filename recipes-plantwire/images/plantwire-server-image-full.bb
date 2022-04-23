@@ -1,11 +1,10 @@
 require recipes-core/images/core-image-minimal.bb
 
-DESCRIPTION = "A small image just capable of allowing a device to boot and \
-having a calculator"
+DESCRIPTION = "Image containing the complete pwire base station setup"
 
 # Add package (not recipe) to image
 # could also have used IMAGE_INSTALL_append = " bc" -> space at beginning
-IMAGE_INSTALL += "redis"
+IMAGE_INSTALL += "pwire-server-backend"
 #IMAGE_INSTALL_remove =+ "bc"
 # Due to package splitting both have to be installed in order for ask to
 # be available
